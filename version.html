@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Diálogos del Reconocimiento</title>
+  </head>
+  <body class="bg-light">
+
+<nav class="navbar fixed-top">
+  <a class="navbar-brand" href="index.html">Diálogos del Reconocimiento &rarr; <span id="version"></span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">MENÚ</span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menuPrincipal">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="page.html?page=Quienes somos">Quienes somos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page.html?page=Noticias">Noticias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page.html?page=Contacto">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row py-5">
+    <div class="col pt-5 pr-4 text-center" id="obras">
+      <!--aca-->
+    </div>
+</div>
+</div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+console.log(urlParams.get('version'));
+document.getElementById("version").innerHTML+=urlParams.get('version');  
+
+var obras = ["Del infame padre","Tercera Generación","REHUE ROMOPULLI: TERRITORIO, PATRIMONIO Y MEMORIA","NO SEAS LADRÓN; NO SEAS FLOJO; NO SEAS MENTIROSO","ENIGMA DE LAS APARIENCIAS","INDAGACIONES VISUALES DE UNAS IDENTIDADES MAPUCHE. FOTOGRAFÍA INFANTIL MAPUCHE","ÁLBUM DE AURELIA HUINA","COMPOSICIÓN DE PALABRAS","FUCHAKECHE RUKA YEM (ABUELATORIO)","COMO SI FUÉSEMOS LOS ANTIGUOS / EN LA NIEBLA DE NINGUNA PARTE","MÁS ALLÁ DEL ESQUEMA ARQUEOLÓGICO","GENTE DE MADERA","PATRIA HUACHA: DE ORÍGENES Y BASTARDOS","PROYECTO MINISTERIO DE LOS PUEBLOS INDÍGENAS 1972","CUANDO EL ALMA SECA, RECOBRA LA MEMORIA DEL TORRENTE","ÑAMEN. DESAPARECER, VENIR EN OLVIDO","EL FUTURO PASADO","LENTO ANDAR, LENTO SUSURRO","XAMPURRIA","TENDIENDO PUENTES (LOS KOLLONTUFE)","RASGOS FUNERARIOS SIMULTÁNEOS","SERIE ÁLBUM FAMILIAR DE LUIS CALFUQUIR","LOS SUEÑOS DE JOAQUÍN CANIUQUEO","SERIE AZUL","EJERCICIOS DE CEGUERA Y DE SORDERA"]
+
+var autores = ["Voluspa Jarpa — Joseph Gómez","Lorena Lemunguier","Leonardo Portus — Joseph Gómez", "Luis Prato — Fanny Canessa","Silvana Zúñiga","José Mela — María Paz Bajas","Danilo Espinoza — Francisco Gallardo","Mónica Bengoa — María José Delpiano","Loreto Millalen — Luis Campos","Josefina Buschmann","Celeste Martínez","Iván Zambrano — Pablo Miranda","Carlos Ampuero — Olaya Sanfuentes","Leonardo Portus — Justo Pastor Mellado","Loreto Millalen — Margarita Alvarado","Antil","Francisco Schwember — Giovanna Bacchiddu", "Luis Prato — Francisco Gallardo","Rodrigo Castro Hueche","Ignacio Helmke","Iván Zambrano — Luis Campos","Danilo Espinoza — Claudio Espinoza","Francisco Schwember — Gabriela Chihuailaf","Ricardo Fuentealba-Fabio — Francisca Massone","Mónica Bengoa"]
+
+for (let x = 0; x < obras.length; x++){
+  $( "#obras" ).append('<dl><dt><a href="obra.html?nombre=' + obras[x] + '&version='+urlParams.get('version')+'">'+ obras[x] +'</a></a></dt><dd><a href="autor.html">' + autores[x] + '</a></dd></dl>');    
+}
+</script>
+
+
+        <script>
+            (function ($) {
+                "use strict";
+                var titular = function () {
+                    var w = $(document).width();
+                        $("dt").attr("style", "font-size:" + w/200 + "rem");
+                        $("dd").attr("style", "font-size:" + w/550 + "rem");
+                };
+                $(document).ready(titular);
+                $(window).on("resize", titular);
+            })(jQuery); // End of use strict
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  </body>
+</html>

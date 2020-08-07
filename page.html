@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Diálogos del Reconocimiento</title>
+  </head>
+  <body class="bg-light">
+
+<nav class="navbar fixed-top">
+  <a class="navbar-brand" href="index.html">Diálogos del Reconocimiento</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">MENÚ</span>
+  </button>
+  <div class="collapse navbar-collapse" id="menuPrincipal">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="page.html?page=Quienes somos">Quienes somos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page.html?page=Noticias">Noticias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page.html?page=Contacto">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="mt-3 container">
+  <div class="container">
+    <div class="row py-5 justify-content-center">
+      <div class="col-10 pt-5">
+        <h2 class="text-center" id="reemplaza"></h2>
+      </div>
+      <div class="col-10">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut metus eget lorem sollicitudin egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam sodales ut eros ut tincidunt. Quisque lacinia magna eget felis ultricies, et rutrum dolor aliquet. Donec vel elit eros. Cras et congue tortor. Cras aliquet congue pulvinar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+        <script>
+            (function ($) {
+                "use strict";
+                var titular = function () {
+                    var w = $(document).width();
+                        $("h2").attr("style", "font-size:" + w/222 + "rem");
+                };
+                $(document).ready(titular);
+                $(window).on("resize", titular);
+            })(jQuery); // End of use strict
+        </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  </body>
+</html>
