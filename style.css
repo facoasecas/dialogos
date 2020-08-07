@@ -8,7 +8,7 @@ body{
 }
 
 body {
-  background: linear-gradient(rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.75) 100%), url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2018/08/12.jpg) 1vw 8vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2018/08/9.jpg) 68vw 62vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2017/08/DEG_4822-1280x600.jpg) 2vw 120vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2014/12/patria-huacha-carlos-ampuero-1280x600.jpg) 58vw 190vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2017/08/DEG_4806-1280x600.jpg) 2vw 245vh no-repeat;
+  background: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%), url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2018/08/12.jpg) 1vw 8vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2018/08/9.jpg) 68vw 62vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2017/08/DEG_4822-1280x600.jpg) 2vw 120vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2014/12/patria-huacha-carlos-ampuero-1280x600.jpg) 58vw 190vh no-repeat, url(http://www.dialogosdelreconocimiento.cl/wp-content/uploads/2017/08/DEG_4806-1280x600.jpg) 2vw 245vh no-repeat;
   background-size: 100%, 25vw, 30vw, 50vw, 40vw, 72vw;
 }
 
@@ -180,7 +180,7 @@ section#proceso::-webkit-scrollbar-thumb:hover {
 section#proceso svg{
   width:auto;
   height:100%;
-  background:gray;
+  background:silver;
 }
 
 .modal {
