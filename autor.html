@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400&display=swap" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <title>Diálogos del Reconocimiento</title>
+    </head>
+    <body class="bg-light">
+        <aside class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <p class="text-muted">
+                            El proyecto Diálogos del Reconocimiento, una iniciativa organizada entre la Escuela de Arte UC y el Centro de Estudios Interculturales e Indígenas, CIIR, fue concebida y desarrollada por una mesa de trabajo
+                            integrada por profesionales de ambas entidades.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <ul class="list-unstyled">
+                            <li><a href="page.html?page=Quienes somos" class="text-white">Quienes somos</a></li>
+                            <li><a href="page.html?page=Noticias" class="text-white">Noticias</a></li>
+                            <li><a href="page.html?page=Contacto" class="text-white">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <nav class="navbar">
+            <div class="container d-flex justify-content-between">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    Diálogos del Reconocimiento
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">&darr;</button>
+            </div>
+        </nav>
+
+        <section class="mt-3 container">
+            <div class="container">
+                <div class="row py-5 justify-content-center">
+                    <div class="col-10 pt-5">
+                        <h1 class="text-center mb-5">Nombre de Autor/a</h1>
+                    </div>
+                    <div class="col-10">
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut metus eget lorem sollicitudin egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam
+                            sodales ut eros ut tincidunt. Quisque lacinia magna eget felis ultricies, et rutrum dolor aliquet. Donec vel elit eros. Cras et congue tortor. Cras aliquet congue pulvinar.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut metus eget lorem sollicitudin egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam
+                            sodales ut eros ut tincidunt. Quisque lacinia magna eget felis ultricies, et rutrum dolor aliquet. Donec vel elit eros. Cras et congue tortor. Cras aliquet congue pulvinar.
+                        </p>
+                    </div>
+                </div>
+            <div class="row py-5">
+                <div class="col pt-5 pr-4 text-center" id="obras">
+                    <!--aca-->
+                </div>
+            </div>
+
+            </div>
+
+
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            console.log(urlParams.get("nombre"));
+            $("#reemplaza").append(urlParams.get("page"));
+        </script>
+
+
+        <script>
+var obras = [
+                "COMPOSICIÓN DE PALABRAS",
+                "EJERCICIOS DE CEGUERA Y DE SORDERA"
+            ];
+
+            var autores = [
+                "Mónica Bengoa — María José Delpiano",
+                "Mónica Bengoa"
+            ];
+
+            for (let x = 0; x < obras.length; x++) {
+                $("#obras").append('<dl><dt><a href="obra.html?nombre=' + obras[x] + "&version=" + urlParams.get("version") + '">' + obras[x] + '</a></a></dt><dd><a href="autor.html">' + autores[x] + "</a></dd></dl>");
+            }            
+
+        </script>
+
+        <script>
+            (function ($) {
+                "use strict";
+                var titular = function () {
+                    var w = $(document).width();
+                    $("h1").attr("style", "font-size:" + w / 250 + "rem");
+                    $("dt").attr("style", "font-size:" + w / 200 + "rem");
+                    $("dd").attr("style", "font-size:" + w / 550 + "rem");                
+                };
+                $(document).ready(titular);
+                $(window).on("resize", titular);
+            })(jQuery); // End of use strict
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    </body>
+</html>
